@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import HintsControl from "./components/hintsControl/HintsControl";
 import styled from "styled-components";
 import ControlHandler from "./components/button-controls/ControlHandler";
@@ -10,10 +9,9 @@ function App() {
     <div>
       <ControlWrapper>
         <ControlHandler />
-        <hr style={{ width: "100%" }} />
+        <hr />
         <AlertControl />
       </ControlWrapper>
-
       <hr />
       <HintsControlsWrapper>
         <HintsControl hints={3} />

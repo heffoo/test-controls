@@ -3,7 +3,7 @@ import Button from "../Button";
 import Input from "../Input";
 
 const AlertControl = () => {
-  const [value, setValue] = useState<string | number>("");
+  const [value, setValue] = useState<string>("");
 
   const numberCheck = () => {
     if (Number(value)) {

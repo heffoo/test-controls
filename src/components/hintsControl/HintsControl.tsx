@@ -89,8 +89,6 @@ const CountryFullName = styled.p`
 `;
 
 const CountryItemContent = styled.span`
-  justify-content: space-between;
-  flex-direction: column;
   width: 450px;
 `;
 
