@@ -27,15 +27,16 @@ const HintControl = observer(({ hints }: HintsControlProps) => {
     [countriesStore, hints]
   );
 
-  useEffect(() => {
-    getCountries(searchValue);
-  }, [getCountries, searchValue]);
-
   return (
     <HintsControlWrapper>
       <StyledInput
         placeholder="Введите значение..."
         onChange={(event) => setSearchValue(event.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            getCountries(searchValue)
+          }
+        }}
       />
       <CountryList>
         {countries.map((country) => {

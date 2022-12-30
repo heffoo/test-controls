@@ -1,14 +1,15 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, KeyboardEvent } from "react";
 import styled from "styled-components";
 
 type InputProps = {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  onKeyDown?: (e: KeyboardEvent<HTMLInputElement>) => void;
   value?: string | number;
   placeholder?: string;
 };
 
-const Input = ({ onChange, value, placeholder }: InputProps) => {
-  return <StyledInput onChange={onChange} placeholder={placeholder} value={value} />;
+const Input = ({ onChange, onKeyDown, value, placeholder }: InputProps) => {
+  return <StyledInput onChange={onChange} onKeyDown={onKeyDown} placeholder={placeholder} value={value} />;
 };
 
 const StyledInput = styled.input`
