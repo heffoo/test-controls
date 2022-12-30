@@ -16,13 +16,12 @@ const HintsControl = observer(({ hints }: HintsControlProps) => {
   const { countriesStore } = useStores();
 
   const getCountries = useCallback(
-    (country: string) => {
-      countriesStore.getCountries(country).then(() => {
-        const countriesToRender = hints
-          ? countriesStore.countries.splice(0, hints)
-          : countriesStore.countries;
-        setCountries(countriesToRender);
-      });
+    async (country: string) => {
+      await countriesStore.getCountries(country);
+      const countriesToRender = hints
+        ? countriesStore.countries.splice(0, hints)
+        : countriesStore.countries;
+      setCountries(countriesToRender);
     },
     [countriesStore, hints]
   );
@@ -34,7 +33,7 @@ const HintsControl = observer(({ hints }: HintsControlProps) => {
         onChange={(event) => setSearchValue(event.target.value)}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
-            getCountries(searchValue)
+            getCountries(searchValue);
           }
         }}
       />
@@ -66,7 +65,6 @@ const CountryList = styled.ul`
   padding: 0;
   transform: translateY(0);
   transition: transform 1s linear;
-  
 `;
 
 const CountryItemHeader = styled.h4`
