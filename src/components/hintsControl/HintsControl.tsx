@@ -18,10 +18,10 @@ const HintControl = observer(({ hints }: HintsControlProps) => {
   const getCountries = useCallback(
     (country: string) => {
       countriesStore.getCountries(country).then(() => {
-        const renderCountries = hints
+        const countriesToRender = hints
           ? countriesStore.countries.splice(0, hints)
           : countriesStore.countries;
-        setCountries(renderCountries);
+        setCountries(countriesToRender);
       });
     },
     [countriesStore, hints]
