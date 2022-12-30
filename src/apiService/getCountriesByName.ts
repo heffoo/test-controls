@@ -6,7 +6,7 @@ export interface CountryInfo {
   flag: string;
 }
 
-export function getCountryByName(countryName: string): Promise<CountryInfo[]> {
+export function getCountriesByName(countryName: string): Promise<CountryInfo[]> {
   return new Promise((resolve) => {
     setTimeout(resolve, getRandom(100, 800));
   }).then(() => {

@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { CountryInfo, getCountryByName } from "../api/apiService";
+import { CountryInfo, getCountriesByName } from "../apiService/getCountriesByName";
 
 class CountriesStore {
   countries: CountryInfo[] = [];
@@ -9,7 +9,7 @@ class CountriesStore {
   }
 
   getCountries = async (value: string) => {
-    await getCountryByName(value)
+    await getCountriesByName(value)
       .then((countries) => {
         this.countries = countries;
       })

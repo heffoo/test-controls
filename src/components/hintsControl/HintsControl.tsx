@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { CountryInfo } from "../../api/apiService";
+import { CountryInfo } from "../../apiService/getCountriesByName";
 import styled from "styled-components";
 import Input from "../Input";
 import { observer } from "mobx-react-lite";
