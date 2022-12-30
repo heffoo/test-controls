@@ -9,7 +9,7 @@ type HintsControlProps = {
   hints: number;
 };
 
-const HintControl = observer(({ hints }: HintsControlProps) => {
+const HintsControl = observer(({ hints }: HintsControlProps) => {
   const [searchValue, setSearchValue] = useState<string>("");
   const [countries, setCountries] = useState<CountryInfo[]>([]);
 
@@ -101,4 +101,4 @@ const CountryItemFlag = styled.img`
   height: 30px;
 `;
 
-export default HintControl;
+export default HintsControl;
