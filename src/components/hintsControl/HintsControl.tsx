@@ -6,7 +6,7 @@ import { observer } from "mobx-react-lite";
 import { useStores } from "../../stores";
 
 type HintsControlProps = {
-  hints?: number;
+  hints: number;
 };
 
 const HintControl = observer(({ hints }: HintsControlProps) => {
