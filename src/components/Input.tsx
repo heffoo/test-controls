@@ -14,6 +14,7 @@ const Input = ({ onChange, value, placeholder }: InputProps) => {
 const StyledInput = styled.input`
   height: 30px;
   width: 200px;
+  outline: 0;
 
   margin: 0 20px;
 `;

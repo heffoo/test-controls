@@ -63,6 +63,9 @@ const CountryList = styled.ul`
   width: 500px;
   margin: 0 20px;
   padding: 0;
+  transform: translateY(0);
+  transition: transform 1s linear;
+  
 `;
 
 const CountryItemHeader = styled.h4`

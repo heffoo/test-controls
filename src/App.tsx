@@ -1,15 +1,15 @@
 import React from "react";
 import HintsControl from "./components/hintsControl/HintsControl";
 import styled from "styled-components";
-import ControlHandler from "./components/button-controls/ControlHandler";
-import AlertControl from "./components/button-controls/AlertControl";
+import ControlHandler from "./components/buttonControls/ControlHandler";
+import AlertControl from "./components/buttonControls/AlertControl";
 
 function App() {
   return (
     <div>
       <ControlWrapper>
         <ControlHandler />
-        <hr />
+        <br />
         <AlertControl />
       </ControlWrapper>
       <hr />
